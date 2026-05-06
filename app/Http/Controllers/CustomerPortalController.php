@@ -137,7 +137,7 @@ class CustomerPortalController extends Controller
                     'phone' => $shipment->sender_phone ?? $customer->phone,
                 ],
                 // Opsional: aktifkan semua metode pembayaran
-                'enabled_payments' => ['credit_card', 'gopay', 'shopeepay', 'permata_va', 'bca_va', 'bni_va', 'bri_va', 'other_va', 'danamon_online', 'akulaku', 'kredivo', 'alfamart', 'indomaret', 'qris'],
+                'enabled_payments' => ['credit_card', 'gopay', 'shopeepay', 'dana', 'permata_va', 'bca_va', 'bni_va', 'bri_va', 'other_va', 'danamon_online', 'akulaku', 'kredivo', 'alfamart', 'indomaret', 'qris'],
             ];
 
             try {
@@ -184,7 +184,7 @@ class CustomerPortalController extends Controller
                 'email' => $customer->email,
                 'phone' => $shipment->sender_phone ?? $customer->phone,
             ],
-            'enabled_payments' => ['credit_card', 'gopay', 'shopeepay', 'permata_va', 'bca_va', 'bni_va', 'bri_va', 'other_va', 'danamon_online', 'akulaku', 'kredivo', 'alfamart', 'indomaret', 'qris'],
+            'enabled_payments' => ['credit_card', 'gopay', 'shopeepay', 'dana', 'permata_va', 'bca_va', 'bni_va', 'bri_va', 'other_va', 'danamon_online', 'akulaku', 'kredivo', 'alfamart', 'indomaret', 'qris'],
         ];
 
         try {

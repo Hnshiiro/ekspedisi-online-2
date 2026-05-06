@@ -63,6 +63,15 @@ class MidtransController extends Controller
                     'notes' => 'Midtrans: ' . $type
                 ]);
             }
+
+            // Add tracking entry for successful payment
+            if ($paymentStatus === 'paid') {
+                $shipment->trackings()->create([
+                    'status' => $shipment->status,
+                    'description' => 'Pembayaran berhasil dikonfirmasi via Midtrans (' . $type . ').',
+                    'checked_at' => now(),
+                ]);
+            }
         }
 
         return response(['message' => 'Notification processed successfully']);
